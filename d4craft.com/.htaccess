@@ -1,0 +1,49 @@
+<IfModule mod_deflate.c>
+  # enable compression
+  SetOutputFilter DEFLATE
+  # exclude old browsers
+  BrowserMatch ^Mozilla/4 gzip-only-text/html
+  BrowserMatch ^Mozilla/4\.0[678] no-gzip
+  BrowserMatch \bMSIE !no-gzip !gzip-only-text/html
+  # exclude certain file types
+  SetEnvIfNoCase Request_URI \.(?:gif|jpe?g|png|pdf|zip|exe|msi)$ no-gzip dont-vary
+  <IfModule mod_headers.c>
+    # fine tune caching at proxy servers
+    Header append Vary User-Agent env=!dont-vary
+  </IfModule>
+</IfModule>
+
+FileETag MTime Size
+<IfModule mod_expires.c>
+  # Enable expirations.
+  ExpiresActive On
+
+  # Cache all files for 2 weeks after access (A).
+  ExpiresDefault A1209600
+
+  <FilesMatch \.php$>
+    # Do not allow PHP scripts to be cached unless they explicitly send cache
+    # headers themselves. Otherwise all scripts would have to overwrite the
+    # headers set by mod_expires if they want another caching behavior.
+    ExpiresActive Off
+  </FilesMatch>
+</IfModule>
+
+# Mod Rewrite Rule
+RewriteEngine on
+
+# Ads.txt redirect
+# Redirect 301 /ads.txt https://api.nitropay.com/v1/ads-556.txt
+
+# Force Https
+# RewriteCond %{HTTPS} off
+# RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+# Append www if not present and there is no subdomain
+RewriteCond %{HTTP_HOST} ^[^.]+\.[^.]+$
+RewriteRule ^(.*)$ https://www.%{HTTP_HOST}/$1 [L,R=301]
+
+# Rewrite to index.php
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*)$ index.php?page=$1 [QSA] [L]

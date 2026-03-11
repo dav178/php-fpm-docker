@@ -1,0 +1,37 @@
+[
+    {
+        "name":"Odd Splitter",
+        "base":"Totem",
+        "power":816,
+        "upgraded":25,
+        "level":86,
+        "inherent":[
+            "7% Cooldown Reduction"
+        ],
+        "affixes":[
+            "+6% Lucky Hit Chance",
+            "+12% Critical Strike Chance Against Injured Enemies",
+            "5% Critical Strike Chance",
+            "8.0% Damage Reduction from Enemies That Are Poisoned"
+        ],
+        "ign":"CharacterName",
+        "price":null
+    },
+    {
+        "name":"Lords Splitter",
+        "base":"Totem",
+        "power":815,
+        "upgraded":0,
+        "level":89,
+        "inherent":[
+            "7% Cooldown Reduction"
+        ],
+        "affixes":[
+            "16 All Stats",
+            "7.2% Cooldown Reduction",
+            "+5.4% Lucky Hit Chance"
+        ],
+        "ign":"CharacterName",
+        "price":500000
+    }
+]

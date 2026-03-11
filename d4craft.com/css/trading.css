@@ -1,0 +1,65 @@
+#trd_setup>div.item{
+    display:inline-block;
+    vertical-align:top;
+    margin:0px 10px 10px 0px;
+}
+
+#trd_result{
+    font-family:Diablo;
+    text-align:center;
+    padding-bottom:20px;
+    font-size:16px;
+    color:var(--item-text);
+}
+
+#trd_result>span.number{
+    font-family:Diablo;
+    font-size:24px;
+    font-weight:bold;
+    color:var(--rarity-unique);
+}
+
+#trd_result.noitems{
+    color:var(--diablo-red-dark);
+}
+
+#trd_result.noitems>span.number{
+    color:var(--diablo-red);
+}
+
+#appTradeAffixButton{
+    color:var(--rarity-unique);
+}
+
+#appTradeAffixButton:hover{
+    color:var(--diablo-red);
+    background:#444;
+}
+
+#appTradeAffixButton.toggled{
+    background:var(--diablo-red);
+    color:#333;
+}
+
+#trdaff_setup:not(:empty){
+    padding-bottom:30px;
+}
+
+#trdaff_setup div.affix:hover{
+    cursor:pointer;
+}
+
+#trdaff_setup div.affix:hover div.wrapper{
+    background:var(--diablo-red-dark);
+}
+
+#trdaff_setup div.affix:hover>div>div.name div.value,#trdaff_setup div.affix:hover>div>div.name div.value *{color:#FF9999 !important;}
+
+#trd_reqaffs:not(:empty){
+    padding-bottom:30px;
+}
+
+#trd_reqaffs div.affix{display:block;width:auto;}
+
+#trd_reqaffs div.affix div.value_range{display:inline-block;width:auto;font-family:Montserrat;padding:0px 10px;}
+#trd_reqaffs div.affix div.actions>div{opacity:1;}

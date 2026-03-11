@@ -1,0 +1,36 @@
+{
+    "mainmenu":{
+        "enchanter":{
+            "title":["Enchanter"],
+            "landing":true
+        },
+        "affixes":{
+            "title":["Affixes"]
+        },
+        "items":{
+            "title":["Items"]
+        },
+        "recipes":{
+            "title":["Recipes"]
+        },
+        "trading":{
+            "title":["Trading"],
+            "debug":true,
+            "json":"trading"
+        }
+    },
+    "topmenu":{
+        "compare":{
+            "title":["Data Changes"],
+            "debug":true
+        },
+        "changelog":{
+            "title":["Changelog"],
+            "json":"changelog"
+        },
+        "about":{
+            "title":["About"],
+            "page":"about"
+        }
+    }
+}

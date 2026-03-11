@@ -1,0 +1,259 @@
+#enc_mods{}
+
+.mtype{margin-bottom:20px;}
+.mtype:last-child{margin-bottom:0px;}
+
+.mtype>div.title{
+    font-size: 18px;
+    margin-bottom: 10px;
+    background: rgba(0,0,0,0.2);
+    border-radius: 3px;
+    padding: 7px 8px;
+    margin-right: 10px;
+    text-transform: uppercase;}
+
+.mtype>div.title>div.suffix{display:inline-block;font-size:12px;padding-left:3px;}
+.mtype>div.title>div.desc{text-transform:none;opacity:0.75;}
+
+.mtype.disabled>div.title,.mtype.disabled>div.title>div.suffix{color:#999;}
+.mtype.aspect>div.title,.mtype.aspect>div.title>div.suffix{color:var(--rarity-legendary);}
+.mtype.fixed>div.title,.mtype.fixed>div.title>div.suffix{color:var(--rarity-unique);}
+.mtype.class>div.title,.mtype.class>div.title>div.suffix{color:var(--rarity-magic);}
+.mtype.inherent>div.title,.mtype.inherent>div.title>div.suffix{color:var(--base-fgold);}
+.mtype.requirements>div.title,.mtype.requirements>div.title>div.suffix{color:var(--diablo-red);}
+
+.affixes{}
+.affixes div.affix{display:inline-block;vertical-align:top;width:33.33%;}
+.affixes div.affix>div.wrapper{margin-bottom:10px;margin-right:10px;background:rgba(255,255,255,0.1);border-radius:3px;position:relative;transition:background-color 0.25s;}
+.affixes div.affix>div>div{display:inline-block;}
+.affixes div.affix>div>div>div{text-shadow:1px 1px #000;font-size:15px;line-height:26px;padding:3px 7px 5px 7px;color:var(--item-text-light);}
+.affixes div.affix>div>div>div>c,.affixes div.affix>div>div>div>u,.affixes div.affix>div>div>div>c>u{text-shadow:1px 1px #000;font-size:15px;line-height:26px;}
+.affixes div.affix>div.tier>div.name>div>c,.affixes div.affix>div.tier>div.name>div>u,.affixes div.affix>div.tier>div.name>div>c>u{font-size:12px;line-height:14px;}
+.affixes div.affix.classAffix>div.wrapper{}
+.affixes div.affix>div>div.name div.value{display:inline-block;background:rgba(0,0,0,0.3);border-radius:3px;padding:2px 4px 3px 4px;;line-height:15px;font-size:15px;color:#FFEEBB;font-family:Diablo;margin-right:3px;}
+.affixes div.affix>div>div.name div.value>div.dash{display:inline-block;padding:0px 3px;color:#FFEEBB;}
+.affixes div.affix>div>div.name div.value>span.hash{font-family:Montserrat;}
+.affixes div.affix.req>div>div.name div.value,.affixes div.affix.req>div>div.name div.value>div.dash{color:#FF9999 !important;}
+.affixes div.affix.bld>div>div.name div.value,.affixes div.affix.bld>div>div.name div.value>div.dash{color:#BBBBFF !important;}
+.affixes div.affix>div>div.name div.classes{display:inline-block;vertical-align:middle;margin-left:3px;}
+.affixes div.affix>div>div.name div.classes>div.icon{display:inline-block;height:22px;vertical-align:middle;margin-left:2px;}
+.affixes div.affix>div>div.name div.classes>div.icon>img{max-height:100%;}
+.affixes div.affix>div>div.name div.ficon{color:#d6c2a0;}
+.affixes div.affix>div:not(.tier)>div.name>div{padding-right:110px;}
+.result_table .affixes div.affix>div:not(.tier)>div.name>div{padding-right:200px;}
+.affixes div.affix>div.wrapper>div:not(.name){display:none;}
+.affixes div.affix>div.wrapper>div.actions{display:block;position:absolute;top:50%;right:5px;margin-top:-14px;transition:all 0.25s;}
+.affixes div.affix>div>div.actions>div{width:28px;height:28px;padding:0px;border-radius:3px;background:rgba(0,0,0,0.3);display:inline-block;line-height:28px;font-family:diablo;text-align:center;margin-left:5px;vertical-align:top;transition:all 0.25s;text-shadow:1px 1px #000;opacity:0;}
+.affixes div.affix>div>div.actions>div.pick{font-size:30px;}
+.affixes div.affix>div>div.actions>div.toggle{font-size:16px;}
+.affixes div.affix>div>div.actions>div:hover{cursor:pointer;}
+.affixes div.affix>div>div.actions>div.pick:hover{color:var(--diablo-red) !important;}
+.affixes div.affix>div>div.actions>div.present:hover{color:var(--rarity-magic) !important;}
+.affixes div.affix>div>div.actions>div.toggle:hover{color:var(--item-text) !important;}
+#enc_mods.nobuilder div.affix>div>div.actions>div.pick{display:none;}
+#enc_mods.nobuilder div.affix>div>div.actions>div.present{display:none;}
+div.mtype:not(.core):not(.class) .affixes div.affix>div>div.actions>div.pick{display:none;}
+div.mtype:not(.core):not(.class) .affixes div.affix>div>div.actions>div.present{display:none;}
+div.mtype.disabled .affixes div.affix{opacity:0.75;}
+.affixes div.affix>div.extra{display:none;}
+div.mtype:not(.aspect) .affixes div.affix>div>div>div>div.fluff{display:none;}
+.affixes div.affix>div>div>div>div.fluff{color:var(--item-text);font-size:12px;padding-bottom:1px;}
+div.mtype:not(.disabled) .affixes div.affix>div>div.name>div>div.tyname{display:none;}
+div.mtype .affixes div.affix>div>div.name>div>div.tyname{color:var(--item-text);font-size:12px;padding-bottom:1px;}
+div.mtype .affixes div.affix.ty1>div>div.name>div>div.tyname{color:var(--rarity-legendary);}
+div.mtype .affixes div.affix.ty2>div>div.name>div>div.tyname{color:var(--rarity-unique);}
+div.mtype.disabled .affixes div.affix.ty1>div>div>div>div.fluff{display:block;}
+
+.affixesByColumn{}
+.affixesByColumn>div.affix_column{display:inline-block;vertical-align:top;width:33.33%;}
+.affixesByColumn>div.affix_column>div.affix{width:auto;display:block;}
+
+.affixes div.affix>div.tier{align-items:center;background:rgba(0,0,0,0.1);margin-right:10px;}
+.affixes div.affix>div.tier:nth-child(2){border-top-left-radius:3px;border-top-right-radius:3px;padding-top:3px;}
+.affixes div.affix>div.tier:last-child{border-bottom-left-radius:3px;border-bottom-right-radius:3px;padding-bottom:3px;}
+.affixes div.affix>div.tier>div{vertical-align:middle;}
+.affixes div.affix>div.tier>div>div{font-size:12px;}
+.affixes div.affix>div.tier>div:not(.name){}
+.affixes div.affix>div.tier>div.name{width:100%;box-sizing:border-box;}
+.affixes div.affix>div.tier>div.name>div{line-height: 20px;}
+.affixes div.affix>div.tier>div.tiers>div::before{content:'Tier';font-size:10px;display:inline-block;opacity:0.5;text-transform:uppercase;font-family:Montserrat;padding-right:3px;}
+.affixes div.affix>div.tier>div.tiers>div{font-family:diablo;font-size:16px;white-space:nowrap;}
+.affixes div.affix>div.tier>div.ilvl>div::before{content:'Power req.';font-size:10px;display:inline-block;opacity:0.5;text-transform:uppercase;font-family:Montserrat;padding-right:3px;}
+.affixes div.affix>div.tier>div.ilvl>div{font-family:diablo;font-size:16px;white-space:nowrap;margin-right:10px;}
+
+.affixes div.affix>div.wrapper:hover{background:rgba(255,255,255,0.2);}
+.affixes div.affix>div.wrapper:hover>div.actions>div{opacity:1;}
+.affixes div.affix>div.wrapper:hover>div>div{color:#FFF;}
+.affixes div.affix.toggled>div.wrapper>div.actions>div.toggle{opacity:1;}
+.affixes div.affix.req>div.wrapper>div.actions>div.pick{opacity:1;}
+.affixes div.affix.req>div.wrapper{background:var(--diablo-red-dark);}
+.affixes div.affix.bld>div.wrapper>div.actions>div.present{opacity:1;}
+.affixes div.affix.bld>div.wrapper{background:var(--rarity-magic);}
+.affixes div.affix.toggled>div.wrapper{margin-bottom:10px;}
+.affixes div.affix.toggled{padding-bottom:30px;}
+
+.affixes div.affix>div.info{justify-content:right;margin-right:10px;padding-top:10px;}
+.affixes div.affix>div.info>div{display:block;width:100%;}
+.affixes div.affix>div.info div.elem{background: rgba(255,255,255,0.05);border-radius:3px;padding:7px 7px 5px 7px;display:block;margin:0px 0px 10px 0px;}
+.affixes div.affix>div.info div.elem span.label{opacity:0.5;text-transform:uppercase;font-size:10px;line-height:10px;display:block;}
+.affixes div.affix>div.info div.elem a:not(:last-child){margin-right:5px;}
+.affixes div.affix>div.info div.elem a:not(:last-child):after,.affixes div.affix>div.info div.elem span:not(:last-child):after{content:',';padding-right:0px;color:#FFF;opacity:0.5;}
+.affixes div.affix>div.info div.elem.bases>div>a,.affixes div.affix>div.info div.elem.bases>div>span.current{white-space: nowrap;display: inline-block;}
+.affixes div.affix>div.info div.elem span:not(:last-child):after{margin-right:5px;}
+.affixes div.affix>div.info div.elem a{text-decoration:none;color:var(--item-text);}
+.affixes div.affix>div.info div.elem a:hover{color:#c3c3fe;}
+.affixes div.affix>div.info div.elem.bases{}
+.affixes div.affix>div.info div.elem:last-child{margin-bottom:0px;}
+.affixes div.affix>div.info div.elem.ukey{padding:7px 0px 0px 7px;}
+.affixes div.affix>div.info div.elem.ukey>div{display:inline-block;margin:0px 10px 5px 0px;}
+.affixes div.affix.hidden{display:none !important;}
+
+.icn{height:24px;display:inline-block;}
+.icn>img{height:100%;vertical-align:top;}
+.icn.ember{}
+
+.mgroup>div.nospawn>div>div{text-decoration: line-through;opacity:0.5;}
+.mgroup>div.nospawn.affix{background:#222;}
+.mgroup>div.nospawn.affix:hover{background: #303030;}
+.mgroup>div.nospawn.affix:hover>div>div, .mgroup>div.nospawn.affix:hover>div>div span{color:#FFF;}
+
+.mgroup .obs{opacity:0.5;}
+
+/* REQUIREMENTS */
+.mgroup .affix.req>.name>div,.mgroup .tier.req>.name>div,.mgroup .tier.areq>.name>div{padding-left:35px;}
+.mgroup .affix.req>.name>div:before,.mgroup .tier.req>.name>div:before,.mgroup .tier.areq>.name>div:before{content: '*';position: absolute;top: 0px;left: 0px;width: 0px;height: 100%;line-height: 31px;font-size: 24px;background: rgba(255,200,100,0.5);color: #FFF;text-shadow: 1px 1px #000;width: 25px;text-align: center;font-weight: normal;overflow: hidden;}
+.mgroup .tier.areq>.name>div:before{opacity:0.25;}
+
+.mgroup>div.affix.req:not(.toggled),.mgroup>div.tier.req:not(.toggled){background: linear-gradient(0deg, rgba(221,204,153,1) 0%, rgba(255,238,187,1) 100%);}
+.mgroup>div.affix.req:not(.toggled):hover,.mgroup>div.tier.req:not(.toggled):hover{background: linear-gradient(0deg, rgba(238,221,170,1) 0%, rgba(255,255,204,1) 100%) !important;}
+.mgroup>div.affix.req>div>div,.mgroup>div.tier.req>div>div,.mgroup>div.affix.req>div>div span,.mgroup>div.tier.req>div>div span{color:#000;text-shadow: 1px 1px #ffffcc;font-weight:bold;}
+
+.mgroup>div.affix.req.toggled>div>div,.mgroup>div.affix.req.toggled>div>div span,.mgroup>div.tier.areq>div>div,.mgroup>div.tier.areq>div>div span{color:#ffffcc;text-shadow:1px 1px #000;}
+.mgroup>div.affix.req.toggled:hover>div>div,.mgroup>div.affix.req.toggled:hover>div>div span{color:#000;text-shadow:none;}
+
+/* AFFIXES */
+.mgroup .affix.bld>.name>div,.mgroup .tier.bld>.name>div{padding-left:35px;}
+.mgroup .affix.bld>.name>div:before,.mgroup .tier.bld>.name>div:before{
+    content: ' ';
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 0px;
+    height: 100%;
+    line-height: 31px;
+    font-size: 24px;
+    background: url(../images/ibuild.png) center center no-repeat;
+    background-color: rgba(246,116,40,0.5);
+    color: #FFF;
+    text-shadow: 1px 1px #000;
+    width: 25px;
+    text-align: center;
+    font-weight: normal;
+    overflow: hidden;
+}
+
+.mgroup>div.affix.bld:not(.toggled),.mgroup>div.tier.bld:not(.toggled){background: linear-gradient(0deg, rgba(238,138,80,1) 0%, rgba(255,172,112,1) 100%);}
+.mgroup>div.affix.bld:not(.toggled):hover,.mgroup>div.tier.bld:not(.toggled):hover{background: linear-gradient(0deg, rgba(255,172,112,1) 0%, rgba(255,206,146,1) 100%) !important;}
+.mgroup>div.affix.bld>div>div,.mgroup>div.tier.bld>div>div,.mgroup>div.affix.bld>div>div span,.mgroup>div.bld.req>div>div span{color:#000;text-shadow: 1px 1px #ffbd82;font-weight:bold;}
+
+.mgroup>div.affix.bld.toggled>div>div,.mgroup>div.affix.bld.toggled>div>div span{color:#ff9b60;text-shadow:1px 1px #000;}
+.mgroup>div.affix.bld.toggled:hover>div>div,.mgroup>div.affix.bld.toggled:hover>div>div span{color:#000;text-shadow:none;}
+
+#appEnchanterInstructions{margin-bottom:30px;}
+#appEnchanterInstructions>div{margin-right:20px;margin-bottom:5px;line-height:28px;color:var(--item-text-light);display:inline-block;}
+#appEnchanterInstructions>div:last-child{margin-right:0px;margin-bottom:0px;}
+#appEnchanterInstructions>div>div.icon{width:28px;height:28px;padding:0px;border-radius:3px;background:rgba(0,0,0,0.3);display:inline-block;line-height:28px;font-family:diablo;text-align:center;margin-right:10px;vertical-align:top;transition:all 0.25s;text-shadow:1px 1px #000;color:var(--rarity-unique);}
+#appEnchanterInstructions>div>div.icon.pick{font-size:30px;}
+#appEnchanterInstructions>div>div.icon.present{font-size:15px;}
+
+/* RESULTS */
+#enc_result:not(:empty){padding-bottom:30px;}
+#enc_result div.affix{display:block;width:auto;}
+#enc_result div.affix div.value_range{display:inline-block;width:auto;font-family:Montserrat;padding:0px 10px;}
+#enc_result div.affix div.value_range>div{font-size:14px;line-height:26px;}
+#enc_result div.affix div.value_range>div.any:hover{color:var(--rarity-unique);}
+#enc_result div.affix div.value_range>div.min{display:none;}
+#enc_result div.affix div.value_range>div.min{color:#BBB;}
+#enc_result div.affix div.value_range>div.min>span{color:#FFF;}
+#enc_result div.affix div.value_range>div.setter{display:none;}
+#enc_result div.affix div.value_range>div.setter>input{
+    background: transparent;
+    border: 0px;
+    text-align: center;
+    color: #FFF;
+    width: 60px;
+    font-size: 14px;
+    line-height: 26px;
+}
+#enc_result div.affix div.value_range>div.setter>input:focus{border:0px;outline:none;}
+#enc_result div.affix div.actions>div{opacity:1;}
+
+.result_table{display:flex;flex-direction:row;}
+.result_table>div.setup{width:100%;}
+.result_table>div.breakdown{margin-right:10px;min-width:300px;text-align:center;}
+.result_table>div.breakdown>div{background:rgba(0,0,0,0.2);border-radius:3px;padding:13px 8px 7px 8px;}
+.result_table>div.breakdown>div>div.title{
+    font-size: 18px;
+    text-transform: uppercase;
+    color:#999;
+}
+.result_table>div.breakdown>div>div.title>div.suffix{
+    display: inline-block;
+    font-size: 12px;
+    padding-left: 4px;
+    color:#999;
+}
+.result_table>div.breakdown>div>div.title.blue{
+    color:var(--rarity-magic);
+}
+.result_table>div.breakdown>div>div.title.blue>div.suffix{
+    color:var(--rarity-magic);
+}
+.result_table>div.breakdown>div>div.title.yellow{
+    color:var(--rarity-rare);
+}
+.result_table>div.breakdown>div>div.title.yellow>div.suffix{
+    color:var(--rarity-rare);
+}
+.result_table>div.breakdown>div>div.odds{
+    font-size:18px;
+    padding:5px 0px 15px 0px;
+}
+.result_table>div.breakdown>div>div.costs{
+    padding:5px 0px 0px 0px;
+}
+.result_table>div.breakdown>div>div.odds>div.best{
+    padding-top:2px;
+    opacity:0.5;
+}
+.result_table>div.breakdown>div>div.costs div.best{
+    padding-top:2px;
+    opacity:0.5;
+}
+.result_table>div.breakdown>div>div.costs>div:not(.error){
+    font-size:18px;
+}
+.result_table>div.breakdown>div>div.costs>div.error{
+    color:#999;
+    padding-bottom:5px;
+}
+.result_table>div.breakdown div.mats{
+    padding-top:5px;
+}
+.result_table>div.breakdown div.mats>div.mat{
+    display:inline-block;
+    font-size:18px;
+}
+.result_table>div.breakdown div.mats>div.mat:not(:last-child){
+    padding-right:5px;
+}
+.result_table>div.breakdown div.mats>div.mat>span.best{
+    opacity:0.5;
+    margin-left:5px;
+}
+.result_table>div.mtype{
+    margin-bottom:0px;
+}
+.result_table>div.mtype>div.affixes>div.mtype{
+    margin-bottom:10px;
+}

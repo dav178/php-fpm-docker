@@ -1,0 +1,3 @@
+<?php
+    $pout.=appGetTemplate("home");
+?>

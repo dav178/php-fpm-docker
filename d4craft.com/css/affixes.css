@@ -1,0 +1,22 @@
+#aff_result{
+    font-family:Diablo;
+    text-align:center;
+    padding-bottom:20px;
+    font-size:16px;
+    color:var(--item-text);
+}
+
+#aff_result>span.number{
+    font-family:Diablo;
+    font-size:24px;
+    font-weight:bold;
+    color:var(--rarity-unique);
+}
+
+#aff_result.noaffixes{
+    color:var(--diablo-red-dark);
+}
+
+#aff_result.noaffixes>span.number{
+    color:var(--diablo-red);
+}

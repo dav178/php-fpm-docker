@@ -1,0 +1,249 @@
+:root{
+    --diablo-red:rgb(205,13,1);
+    --diablo-red-dark:#8a0600 ;
+    --rarity-magic:#0693e3;
+    --rarity-rare:#ff0;
+    --rarity-legendary:#bf642f;
+    --rarity-unique:#d6a577;
+    --base-beige:#97927e;
+    --base-beige-hover:#ece4c4;
+    --base-gold:#c1b068;
+    --base-gold-hover:#f3fc9f;
+    --item-text:#c6bdb8;
+    --item-text-light:#e8e0dd;
+}
+
+body{background:#333;margin:0;}
+*{font-family:Montserrat;color:#FFF;font-weight:400;font-size:13px;line-height:18px;}
+
+.color-diablo-red{color:var(--diablo-red);}
+.color-rarity-unique{color:var(--rarity-unique);}
+.color-rarity-magic{color:var(--rarity-magic);}
+
+.noselect {
+    -webkit-user-select: none; /* Safari */
+    -ms-user-select: none; /* IE 10 and IE 11 */
+    user-select: none; /* Standard syntax */
+}
+
+@font-face {
+    font-family: 'diablo';
+    src: url('../ext/diablo.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'exocet';
+    src: url('../ext/exocet.ttf') format('ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'game';
+    src: url('../ext/game.ttf') format('ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: fonticos;
+    src: url('../ext/fonticos.woff') format("woff");
+    font-weight: 400;
+    font-style: normal;
+    font-display: block
+}
+
+.ficon{
+    display: inline-block;
+    width: 18px;
+    height: 18px;
+    background-size: 18px;
+    vertical-align: middle;
+    margin-right: 4px;
+    font-size: 16px;
+    font-family: fonticos !important;
+    font-style: normal;
+    font-weight: 400;
+    font-variant: normal;
+    text-transform: none;
+    -webkit-font-smoothing: antialiased;
+}
+
+.ficon.zone_event:before {content: "\e900";}
+.ficon.world_tier_statue:before {content: "\e901";}
+.ficon.world_boss:before {content: "\e902";}
+.ficon.whisper_of_the_dead:before {content: "\e903";}
+.ficon.weapon_vendor:before {content: "\e904";}
+.ficon.waypoint:before {content: "\e905";}
+.ficon.wardrobe:before {content: "\e906";}
+.ficon.untracked_area:before {content: "\e907";}
+.ficon.unsavory_oddities:before {content: "\e908";}
+.ficon.unique_item:before {content: "\e909";}
+.ficon.unique_elite:before {content: "\e90a";}
+.ficon.unconventional_steed_armor:before {content: "\e90b";}
+.ficon.treasure_goblin:before {content: "\e90c";}
+.ficon.town:before {content: "\e90d";}
+.ficon.stronghold:before {content: "\e90e";}
+.ficon.story_dungeon:before {content: "\e90f";}
+.ficon.stash:before {content: "\e910";}
+.ficon.stable:before {content: "\e911";}
+.ficon.side_quest:before {content: "\e912";}
+.ficon.shrine:before {content: "\e913";}
+.ficon.shortcut:before {content: "\e914";}
+.ficon.rings_amulets:before {content: "\e915";}
+.ficon.quest_objective:before {content: "\e916";}
+.ficon.purveyor_of_curiosities:before {content: "\e917";}
+.ficon.priority_quest:before {content: "\e918";}
+.ficon.portal:before {content: "\e919";}
+.ficon.plant:before {content: "\e91a";}
+.ficon.ore:before {content: "\e91b";}
+.ficon.odds_and_ends:before {content: "\e91c";}
+.ficon.occultist:before {content: "\e91d";}
+.ficon.npc:before {content: "\e91e";}
+.ficon.mystery_chest:before {content: "\e91f";}
+.ficon.miscellaneous:before {content: "\e920";}
+.ficon.main_quest:before {content: "\e921";}
+.ficon.lore:before {content: "\e922";}
+.ficon.legendary_elite:before {content: "\e923";}
+.ficon.landmark:before {content: "\e924";}
+.ficon.jeweler:before {content: "\e925";}
+.ficon.item:before {content: "\e926";}
+.ficon.interactable:before {content: "\e927";}
+.ficon.helltide_chest:before {content: "\e928";}
+.ficon.helltide_area:before {content: "\e929";}
+.ficon.healer:before {content: "\e92a";}
+.ficon.event:before {content: "\e92b";}
+.ficon.emote_statue:before {content: "\e92c";}
+.ficon.elite:before {content: "\e92d";}
+.ficon.easter_egg:before {content: "\e92e";}
+.ficon.dungeon:before {content: "\e92f";}
+.ficon.cursed_scroll:before {content: "\e930";}
+.ficon.chest:before {content: "\e931";}
+.ficon.cellar:before {content: "\e932";}
+.ficon.boss:before {content: "\e933";}
+.ficon.blacksmith:before {content: "\e934";}
+.ficon.aspect:before {content: "\e935";}
+.ficon.armor_vendor:before {content: "\e936";}
+.ficon.area:before {content: "\e937";}
+.ficon.altar_of_lilith:before {content: "\e938";}
+.ficon.altar_of_extraction:before {content: "\e939";}
+.ficon.altar_of_cleansing:before {content: "\e93a";}
+.ficon.alchemist:before{content: "\e93b";}
+.ficon.active_helltide:before{content: "\e93c";}
+.ficon.untitled:before{content: "\e93d";}
+
+.hidden{display:none;}
+.appmenu{display:none;}
+.appmsg{padding:10px 15px;background:rgba(0,0,0,0.2);display:inline-block;color:var(--item-text-light);font-size:16px;}
+.swrap{width:1400px;margin:0 auto;position:relative;box-sizing:border-box;height:100%;}
+
+.div_stable{display:table;}
+.div_stable>div{display:table-row;}
+.div_stable>div>div{display:table-cell;}
+
+.mshadow{-webkit-box-shadow: 2px 2px 3px 0px rgb(0 0 0 / 25%);-moz-box-shadow: 2px 2px 3px 0px rgba(0,0,0,0.25);box-shadow: 2px 2px 3px 0px rgb(0 0 0 / 25%);}
+
+#siteWrap{}
+#top{background:#000;border-bottom: 2px solid #333;text-align:right;min-height:34px;}
+#header{background:#111;min-height:58px;
+-webkit-box-shadow: 0px 0px 10px 2px rgb(0 0 0 / 50%);-moz-box-shadow: 0px 0px 10px 2px rgba(0,0,0,0.5);box-shadow: 0px 0px 10px 2px rgb(0 0 0 / 50%);}
+#content{}
+#footer{padding:30px 0px 30px 0px;text-align:center;opacity:0.5;}
+#header>div.swrap{display:flex;align-items: center;min-height:58px;}
+
+#mobileMenu{border-radius:3px;cursor:pointer;padding:3px 4px;display:none;right:0px;position:absolute;}
+#mobileMenu>svg{fill:var(--item-text);vertical-align:top;}
+#mobileMenu:hover>svg{fill:var(--item-text-light);}
+#mobileMenu:hover{background:rgba(255,255,255,0.2);}
+
+#topMenu{padding:3px 0px;}
+#topMenu>div.item{display:inline-block;}
+#topMenu>div.item>div{color:var(--base-gold);font-size:12px;font-weight:bold;padding:5px;}
+#topMenu>div.item:hover:not(.selected){cursor:pointer;}
+#topMenu>div.item:hover>div,#topMenu>div.item.selected>div{color:var(--base-gold-hover);}
+
+#mainMenu{padding:10px 0px;}
+#mainMenu>div.item{display:inline-block;}
+#mainMenu>div.item>div{color:var(--base-beige);font-size:24px;text-transform:uppercase;padding:10px;font-family:diablo;}
+#mainMenu>div.item:hover:not(.selected){cursor:pointer;}
+#mainMenu>div.item:hover>div,#mainMenu>div.item.selected>div{color:var(--base-beige-hover);}
+
+#mainMenu>#topMenu>div.item{display:block;text-align:center;}
+
+.cinfsel{display:inline-block;vertical-align:top;margin:0px 10px 10px 0px;}
+.cinfsel>div.current{}
+.cinfsel.init>div.current{color:#BBB;}
+.cinfsel>div.opts{display:none;}
+.cinfsel>div.current,.cinfsel>div.opts>div.opt{
+    display:inline-block;
+    margin: 0px 0px 0px 0px;
+    vertical-align:top;
+    font-size:16px;
+    font-family:diablo;
+    background:#444;text-shadow:1px 1px #000;
+    padding:10px;
+    cursor:pointer;border-right:1px solid #333;
+    position:relative;border-bottom:1px solid #333;
+    transition:all 0.25s;}
+.cinfsel>div.opts>div.opt.sel{color:var(--base-beige-hover);}
+.cinfsel>div.current:hover,.cinfsel>div.opts>div.opt:hover{background: var(--base-beige-hover);color: #000;text-shadow: none;}
+.cinfsel span.obs{opacity:0.5;}
+.cinfsel>div.current:hover span.obs,.cinfsel>div.opts>div.opt:hover span.obs{color:#000;text-shadow:none;}
+.cinfsel div.icon{height: 50px;margin-bottom:5px;}
+.cinfsel div.icon>img{max-height:100%;}
+
+.appbtn{
+    background: #444;
+    display: inline-block;
+    height: 40px;
+    line-height: 40px;
+    vertical-align: top;
+    font-family:diablo;
+    font-size:16px;
+    transition:all 0.25s;
+    padding:0px 10px;
+    margin-right:10px;
+}
+
+.appbtn:hover{
+    background: var(--base-beige-hover);
+    color: #000;
+    text-shadow: none;
+    cursor:pointer;
+}
+
+#d4cSelBase div.opt{text-align:center;}
+#d4cSelClass div.opt{text-align:center;}
+#d4cSelBase.cinfsel div.icon{height:50px;}
+
+#appTooltip{position:absolute;z-index:99999;background:#333;border:3px solid #666;max-width:200px;border-radius:5px;margin-top:10px;}
+#appTooltip>div.wrap{position:relative;font-size:12px;line-height:12px;padding:5px;color:#DDD;text-shadow:1px 1px #000;}
+
+.vertalign{
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+#coeLinkBack{float:left;padding-left:12px;margin-top:9px;}
+#coeLinkBack a{text-decoration:none;color:var(--base-gold);text-transform:lowercase;font-size:14px;font-weight:bold;}
+#coeLinkBack a:hover{color:var(--base-gold-hover);}
+
+#logo{height:28px;display:inline-block;margin:-7px 20px 0px 10px;cursor:pointer;}
+#logo>img{height:100%;}
+
+div#textContent{
+    padding:10px 10px;
+    font-size:14px;
+}
+
+div#textContent a{color:var(--base-gold);font-weight:bold;text-decoration:none;}
+div#textContent a:hover{color:var(--base-gold-hover);}
+
+div#textContent .bold{font-weight:bold;}
+
+h1{color:var(--base-gold);font-size:24px;font-weight:bold;}
+
+div.message{}

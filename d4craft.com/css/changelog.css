@@ -1,0 +1,17 @@
+#log_setup{padding:10px 0px 0px 0px;}
+div.log{display:none;}
+div.log:not(:last-child){margin-bottom:30px;}
+div.log>div.date{display:flex;}
+div.log>div.date>div.text{font-family:Diablo;color:var(--item-text);font-size:22px;padding-right:15px;white-space:nowrap;}
+div.log>div.date>div.spacer{width:100%;position:relative;}
+div.log>div.date>div.spacer:before{content:' ';position:absolute;top:50%;margin-top:-0.5px;left:0px;width:100%;height:1px;background:var(--item-text);opacity:0.5;}
+div.log>div.elements{padding-left:160px;padding-top:10px;}
+div.log>div.elements>div.element{font-size:14px;opacity:0.7;}
+div.log>div.elements>div.element:not(:last-child){margin-bottom:5px;}
+div.log>div.elements>div.element>div.ficon{color:var(--rarity-unique);font-size:14px;height:14px;width:14px;margin-top:-6px;margin-right:8px;margin-left:5px;}
+div.log>div.elements>div.element.importance1{font-size:16px;opacity:0.8;}
+div.log>div.elements>div.element.importance1>div.ficon{font-size:16px;height:16px;width:16px;margin-top:-4px;margin-right:7px;margin-left:4px;}
+div.log>div.elements>div.element.importance2{font-size:20px;opacity:0.9;}
+div.log>div.elements>div.element.importance2>div.ficon{font-size:20px;height:20px;width:20px;margin-top:-2px;margin-right:6px;margin-left:2px;}
+div.log>div.elements>div.element.importance3{font-size:24px;opacity:1;}
+div.log>div.elements>div.element.importance3>div.ficon{font-size:24px;height:24px;width:24px;margin-top:0px;margin-right:5px;margin-left:0px;}

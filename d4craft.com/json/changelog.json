@@ -1,0 +1,12 @@
+{
+    "2023-07-09":[
+        "+++Added Recipes database",
+        "++Added Changelog",
+        "+Added value range functionnality for enchanter"
+    ],
+    "2023-07-08":[
+        "+++Added Affixes database",
+        "+++Added Enchanter simulator",
+        "+++Added Items database"
+    ]
+}
